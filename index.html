@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>English Vocabulary Flashcards</title>
+<style>
+:root {
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f5f5f7;
+  margin:0;
+  padding:18px 14px 40px;
+  color:#222;
+}
+h1 { font-size:25px; text-align:center; margin:8px 0 8px; }
+.hint { text-align:center; color:#666; margin:0 auto 14px; line-height:1.5; font-size:14px; }
+.toolbar {
+  max-width:650px; margin:0 auto 14px; background:#fff; border-radius:14px;
+  padding:12px 14px; box-shadow:0 2px 8px #0001; display:flex; gap:8px; flex-wrap:wrap;
+  justify-content:center;
+}
+.toolbar button {
+  border:0; border-radius:10px; padding:9px 12px; font-size:14px; background:#eee;
+}
+.card {
+  background:#fff; border-radius:15px; margin:10px auto; max-width:650px;
+  box-shadow:0 2px 8px #0001; overflow:hidden;
+}
+summary {
+  padding:18px 16px; font-size:21px; font-weight:700; cursor:pointer;
+  display:flex; align-items:center; gap:8px; list-style:none;
+}
+summary::-webkit-details-marker { display:none; }
+.word { flex:1; }
+.status { min-width:24px; text-align:center; }
+.chevron { color:#999; font-size:20px; }
+.speak-btn{border:0;background:#eee;border-radius:9px;width:38px;height:34px;font-size:18px;cursor:pointer;flex:0 0 auto}.speak-btn:active{transform:scale(.96)}.example-jp{color:#555;margin-top:4px}
+.answer { padding:0 18px 18px; border-top:1px solid #eee; line-height:1.6; }
+p { margin:12px 0; }
+.controls {
+  margin-top:16px; padding-top:14px; border-top:1px solid #eee;
+  display:flex; flex-direction:column; gap:10px;
+}
+.unknown-btn {
+  width:100%; padding:12px; border-radius:11px; border:1px solid #bbb;
+  background:#fff; font-size:15px; text-align:left;
+}
+.unknown-btn.active { background:#ffe7e7; border-color:#d55; }
+.mistakes {
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+  font-size:15px;
+}
+.mistakes button {
+  width:42px; height:38px; border:0; border-radius:10px; background:#eee; font-size:22px;
+}
+.mistakes strong {
+  min-width:36px; text-align:center; font-size:19px;
+}
+#summary {
+  max-width:650px; margin:0 auto 14px; text-align:center; color:#555; font-size:14px;
+}
+.badge {
+  display:inline-block; min-width:22px; padding:2px 6px; border-radius:8px;
+  background:#eee; font-size:12px; text-align:center;
+}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#f5f5f7"></head>
+<body>
+<h1>English Vocabulary Flashcards</h1>
+<p class="hint">英単語をタップすると、意味・例文・Synonymsが開きます。<br>「わからなかった」と間違えた回数を記録できます。</p>
+<div id="summary">読み込み中…</div>
+<div class="toolbar">
+  <button onclick="showAll()">すべて表示</button>
+  <button onclick="showUnknown()">わからなかった単語だけ</button>
+  <button onclick="showAll()">すべて表示に戻す</button>
+</div>
+<div id="cards">
+
+    <details class="card" data-id="0" data-key="delight">
+      <summary>
+        <span class="word">delight</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-0"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞 / 動詞</p>
+<p><b>意味：</b>大きな喜び、喜ばせる</p>
+<p><b>例文：</b><br><i>The news delighted everyone in the office.</i><div class="example-jp">訳：そのニュースはオフィスのみんなを大いに喜ばせた。</div></p>
+<p><b>Synonyms：</b><br>• great pleasure（名詞）<br>• joy（名詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-0" onclick="toggleUnknown(event,0)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,0,-1)">−</button>
+            <strong id="count-0">0</strong>
+            <button onclick="changeCount(event,0,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="1" data-key="disgraceful">
+      <summary>
+        <span class="word">disgraceful</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-1"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>形容詞</p>
+<p><b>意味：</b>恥ずべき、みっともない</p>
+<p><b>例文：</b><br><i>His behavior was disgraceful and unacceptable.</i><div class="example-jp">訳：彼の行動は恥ずべきもので、受け入れられないものだった。</div></p>
+<p><b>Synonyms：</b><br>• shameful（形容詞）<br>• appalling（形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-1" onclick="toggleUnknown(event,1)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,1,-1)">−</button>
+            <strong id="count-1">0</strong>
+            <button onclick="changeCount(event,1,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="2" data-key="reputable">
+      <summary>
+        <span class="word">reputable</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-2"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>形容詞</p>
+<p><b>意味：</b>評判の良い、信頼できる</p>
+<p><b>例文：</b><br><i>She works for a reputable international company.</i><div class="example-jp">訳：彼女は評判の良い国際企業で働いている。</div></p>
+<p><b>Synonyms：</b><br>• respected（形容詞）<br>• trustworthy（形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-2" onclick="toggleUnknown(event,2)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,2,-1)">−</button>
+            <strong id="count-2">0</strong>
+            <button onclick="changeCount(event,2,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="3" data-key="diminish">
+      <summary>
+        <span class="word">diminish</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-3"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>減少する、弱まる、〜を減らす</p>
+<p><b>例文：</b><br><i>The effects of the medicine gradually diminished.</i><div class="example-jp">訳：その薬の効果は徐々に弱まった。</div></p>
+<p><b>Synonyms：</b><br>• decrease（動詞）<br>• reduce（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-3" onclick="toggleUnknown(event,3)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,3,-1)">−</button>
+            <strong id="count-3">0</strong>
+            <button onclick="changeCount(event,3,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="4" data-key="henceforth">
+      <summary>
+        <span class="word">henceforth</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-4"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>副詞</p>
+<p><b>意味：</b>今後は、これ以降</p>
+<p><b>例文：</b><br><i>Henceforth, all employees must follow the new policy.</i><div class="example-jp">訳：今後、すべての従業員は新しい方針に従わなければならない。</div></p>
+<p><b>Synonyms：</b><br>• from now on（副詞句）<br>• hereafter（副詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-4" onclick="toggleUnknown(event,4)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,4,-1)">−</button>
+            <strong id="count-4">0</strong>
+            <button onclick="changeCount(event,4,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="5" data-key="transpire">
+      <summary>
+        <span class="word">transpire</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-5"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>起こる、判明する、（水分などが）発散する</p>
+<p><b>例文：</b><br><i>It later transpired that he had known about the problem.</i><div class="example-jp">訳：後になって、彼がその問題を知っていたことが判明した。</div></p>
+<p><b>Synonyms：</b><br>• emerge（動詞）<br>• occur（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-5" onclick="toggleUnknown(event,5)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,5,-1)">−</button>
+            <strong id="count-5">0</strong>
+            <button onclick="changeCount(event,5,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="6" data-key="depict">
+      <summary>
+        <span class="word">depict</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-6"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>描く、表現する</p>
+<p><b>例文：</b><br><i>The painting depicts a traditional village in Japan.</i><div class="example-jp">訳：その絵は日本の伝統的な村を描いている。</div></p>
+<p><b>Synonyms：</b><br>• portray（動詞）<br>• illustrate（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-6" onclick="toggleUnknown(event,6)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,6,-1)">−</button>
+            <strong id="count-6">0</strong>
+            <button onclick="changeCount(event,6,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="7" data-key="indispensable">
+      <summary>
+        <span class="word">indispensable</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-7"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>形容詞</p>
+<p><b>意味：</b>不可欠な、なくてはならない</p>
+<p><b>例文：</b><br><i>The internet has become indispensable to modern society.</i><div class="example-jp">訳：インターネットは現代社会に欠かせないものになっている。</div></p>
+<p><b>Synonyms：</b><br>• essential（形容詞）<br>• vital（形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-7" onclick="toggleUnknown(event,7)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,7,-1)">−</button>
+            <strong id="count-7">0</strong>
+            <button onclick="changeCount(event,7,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="8" data-key="crucial">
+      <summary>
+        <span class="word">crucial</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-8"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>形容詞</p>
+<p><b>意味：</b>非常に重要な、決定的な</p>
+<p><b>例文：</b><br><i>Education plays a crucial role in reducing inequality.</i><div class="example-jp">訳：教育は格差を減らすうえで重要な役割を果たす。</div></p>
+<p><b>Synonyms：</b><br>• essential（形容詞）<br>• critical（形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-8" onclick="toggleUnknown(event,8)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,8,-1)">−</button>
+            <strong id="count-8">0</strong>
+            <button onclick="changeCount(event,8,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="9" data-key="contribute">
+      <summary>
+        <span class="word">contribute</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-9"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>貢献する、寄与する</p>
+<p><b>例文：</b><br><i>Regular exercise can contribute to better health.</i><div class="example-jp">訳：定期的な運動は健康状態の改善に役立つ。</div></p>
+<p><b>Synonyms：</b><br>• help（動詞）<br>• promote（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-9" onclick="toggleUnknown(event,9)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,9,-1)">−</button>
+            <strong id="count-9">0</strong>
+            <button onclick="changeCount(event,9,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="10" data-key="attribute">
+      <summary>
+        <span class="word">attribute</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-10"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞 / 名詞</p>
+<p><b>意味：</b>〜の原因だと考える、属性・特質</p>
+<p><b>例文：</b><br><i>Many people attribute their success to hard work.</i><div class="example-jp">訳：多くの人は自分の成功を努力のおかげだと考えている。</div></p>
+<p><b>Synonyms：</b><br>• ascribe（動詞）<br>• credit（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-10" onclick="toggleUnknown(event,10)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,10,-1)">−</button>
+            <strong id="count-10">0</strong>
+            <button onclick="changeCount(event,10,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="11" data-key="utilize">
+      <summary>
+        <span class="word">utilize</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-11"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>利用する、活用する</p>
+<p><b>例文：</b><br><i>We should utilize existing resources more efficiently.</i><div class="example-jp">訳：私たちは既存の資源をもっと効率的に活用すべきだ。</div></p>
+<p><b>Synonyms：</b><br>• use（動詞）<br>• employ（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-11" onclick="toggleUnknown(event,11)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,11,-1)">−</button>
+            <strong id="count-11">0</strong>
+            <button onclick="changeCount(event,11,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="12" data-key="entrepreneur">
+      <summary>
+        <span class="word">entrepreneur</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-12"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞</p>
+<p><b>意味：</b>起業家、企業家</p>
+<p><b>例文：</b><br><i>The young entrepreneur founded a successful technology company.</i><div class="example-jp">訳：その若い起業家は成功したテクノロジー企業を設立した。</div></p>
+<p><b>Synonyms：</b><br>• business owner（名詞）<br>• founder（名詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-12" onclick="toggleUnknown(event,12)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,12,-1)">−</button>
+            <strong id="count-12">0</strong>
+            <button onclick="changeCount(event,12,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="13" data-key="correlate">
+      <summary>
+        <span class="word">correlate</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-13"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>相関する、関連がある</p>
+<p><b>例文：</b><br><i>Income and educational attainment often correlate.</i><div class="example-jp">訳：収入と学歴はしばしば相関する。</div></p>
+<p><b>Synonyms：</b><br>• relate（動詞）<br>• correspond（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-13" onclick="toggleUnknown(event,13)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,13,-1)">−</button>
+            <strong id="count-13">0</strong>
+            <button onclick="changeCount(event,13,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="14" data-key="mimic">
+      <summary>
+        <span class="word">mimic</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-14"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞 / 名詞</p>
+<p><b>意味：</b>まねる、模倣する</p>
+<p><b>例文：</b><br><i>Children often mimic the behavior of adults.</i><div class="example-jp">訳：子どもは大人の行動をよくまねする。</div></p>
+<p><b>Synonyms：</b><br>• imitate（動詞）<br>• copy（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-14" onclick="toggleUnknown(event,14)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,14,-1)">−</button>
+            <strong id="count-14">0</strong>
+            <button onclick="changeCount(event,14,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="15" data-key="voluntarily">
+      <summary>
+        <span class="word">voluntarily</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-15"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>副詞</p>
+<p><b>意味：</b>自発的に、任意で</p>
+<p><b>例文：</b><br><i>Many people voluntarily donate money to local charities.</i><div class="example-jp">訳：多くの人が自発的に地元の慈善団体へ寄付している。</div></p>
+<p><b>Synonyms：</b><br>• willingly（副詞）<br>• freely（副詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-15" onclick="toggleUnknown(event,15)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,15,-1)">−</button>
+            <strong id="count-15">0</strong>
+            <button onclick="changeCount(event,15,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="16" data-key="adolescent">
+      <summary>
+        <span class="word">adolescent</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-16"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞 / 形容詞</p>
+<p><b>意味：</b>青年、思春期の</p>
+<p><b>例文：</b><br><i>Adolescents are strongly influenced by their peers.</i><div class="example-jp">訳：青年期の人々は仲間から強い影響を受ける。</div></p>
+<p><b>Synonyms：</b><br>• teenager（名詞）<br>• juvenile（名詞 / 形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-16" onclick="toggleUnknown(event,16)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,16,-1)">−</button>
+            <strong id="count-16">0</strong>
+            <button onclick="changeCount(event,16,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="17" data-key="substance">
+      <summary>
+        <span class="word">substance</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-17"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞</p>
+<p><b>意味：</b>物質、実質、内容</p>
+<p><b>例文：</b><br><i>The government introduced stricter controls on harmful substances.</i><div class="example-jp">訳：政府は有害物質に対する規制を強化した。</div></p>
+<p><b>Synonyms：</b><br>• material（名詞）<br>• matter（名詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-17" onclick="toggleUnknown(event,17)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,17,-1)">−</button>
+            <strong id="count-17">0</strong>
+            <button onclick="changeCount(event,17,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="18" data-key="capable">
+      <summary>
+        <span class="word">capable</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-18"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>形容詞</p>
+<p><b>意味：</b>能力がある、〜できる</p>
+<p><b>例文：</b><br><i>She is capable of solving complex problems on her own.</i><div class="example-jp">訳：彼女は複雑な問題を一人で解決することができる。</div></p>
+<p><b>Synonyms：</b><br>• able（形容詞）<br>• competent（形容詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-18" onclick="toggleUnknown(event,18)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,18,-1)">−</button>
+            <strong id="count-18">0</strong>
+            <button onclick="changeCount(event,18,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="19" data-key="dependence">
+      <summary>
+        <span class="word">dependence</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-19"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞</p>
+<p><b>意味：</b>依存、依存状態</p>
+<p><b>例文：</b><br><i>Excessive dependence on technology can create social problems.</i><div class="example-jp">訳：テクノロジーへの過度な依存は社会問題を引き起こす可能性がある。</div></p>
+<p><b>Synonyms：</b><br>• reliance（名詞）<br>• addiction（名詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-19" onclick="toggleUnknown(event,19)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,19,-1)">−</button>
+            <strong id="count-19">0</strong>
+            <button onclick="changeCount(event,19,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="20" data-key="consumption">
+      <summary>
+        <span class="word">consumption</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-20"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>名詞</p>
+<p><b>意味：</b>消費、摂取</p>
+<p><b>例文：</b><br><i>Reducing energy consumption can lower household costs.</i><div class="example-jp">訳：エネルギー消費を減らすことで家庭の費用を抑えられる。</div></p>
+<p><b>Synonyms：</b><br>• use（名詞）<br>• expenditure（名詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-20" onclick="toggleUnknown(event,20)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,20,-1)">−</button>
+            <strong id="count-20">0</strong>
+            <button onclick="changeCount(event,20,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="21" data-key="exacerbate">
+      <summary>
+        <span class="word">exacerbate</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-21"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>悪化させる</p>
+<p><b>例文：</b><br><i>Poor planning may exacerbate the problem.</i><div class="example-jp">訳：計画が不十分だと問題を悪化させる可能性がある。</div></p>
+<p><b>Synonyms：</b><br>• aggravate（動詞）<br>• worsen（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-21" onclick="toggleUnknown(event,21)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,21,-1)">−</button>
+            <strong id="count-21">0</strong>
+            <button onclick="changeCount(event,21,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="22" data-key="engage">
+      <summary>
+        <span class="word">engage</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-22"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞</p>
+<p><b>意味：</b>従事する、関わる、参加する</p>
+<p><b>例文：</b><br><i>Students should actively engage in classroom discussions.</i><div class="example-jp">訳：学生はコミュニケーション能力を伸ばすため、授業中の議論に積極的に参加すべきだ。</div></p>
+<p><b>Synonyms：</b><br>• participate（動詞）<br>• involve（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-22" onclick="toggleUnknown(event,22)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,22,-1)">−</button>
+            <strong id="count-22">0</strong>
+            <button onclick="changeCount(event,22,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="card" data-id="23" data-key="highlight">
+      <summary>
+        <span class="word">highlight</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button>
+        <span class="status" id="status-23"></span>
+        <span class="chevron">＋</span>
+      </summary>
+      <div class="answer">
+        <p><b>品詞：</b>動詞 / 名詞</p>
+<p><b>意味：</b>強調する、目立たせる、重要な点</p>
+<p><b>例文：</b><br><i>The report highlights the need for urgent action.</i><div class="example-jp">訳：その報告書は緊急の対策の必要性を強調している。</div></p>
+<p><b>Synonyms：</b><br>• emphasize（動詞）<br>• stress（動詞）</p>
+        <div class="controls">
+          <button class="unknown-btn" id="unknown-23" onclick="toggleUnknown(event,23)">□ わからなかった</button>
+          <div class="mistakes">
+            <span>間違えた回数</span>
+            <button onclick="changeCount(event,23,-1)">−</button>
+            <strong id="count-23">0</strong>
+            <button onclick="changeCount(event,23,1)">＋</button>
+          </div>
+        </div>
+      </div>
+    </details>
+<details class="card" data-id="24" data-key="contribution"><summary><span class="word">contribution</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-24"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞</p><p><b>意味：</b>貢献、寄付、寄与</p><p><b>例文：</b><br><i>Everyone made a valuable contribution to the success of the project.</i><div class="example-jp">訳：全員がそのプロジェクトの成功に貴重な貢献をした。</div></p><p><b>Synonyms：</b><br>• contribution（名詞）<br>• donation（名詞）</p><div class="controls"><button class="unknown-btn" id="unknown-24" onclick="toggleUnknown(event,24)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,24,-1)">−</button><strong id="count-24">0</strong><button onclick="changeCount(event,24,1)">＋</button></div></div></div></details>
+<details class="card" data-id="25" data-key="advertisers"><summary><span class="word">advertisers</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-25"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞（複数形）</p><p><b>意味：</b>広告主、広告会社</p><p><b>例文：</b><br><i>Advertisers often use social media to target younger consumers.</i><div class="example-jp">訳：広告主は若い消費者を狙うためにソーシャルメディアをよく利用する。</div></p><p><b>Synonyms：</b><br>• advertiser（名詞（複数形））<br>• promoter（名詞（複数形））</p><div class="controls"><button class="unknown-btn" id="unknown-25" onclick="toggleUnknown(event,25)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,25,-1)">−</button><strong id="count-25">0</strong><button onclick="changeCount(event,25,1)">＋</button></div></div></div></details>
+<details class="card" data-id="26" data-key="voluntary"><summary><span class="word">voluntary</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-26"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞</p><p><b>意味：</b>自発的な、任意の、無償の</p><p><b>例文：</b><br><i>Participation in the survey is completely voluntary.</i><div class="example-jp">訳：その調査への参加は完全に任意です。</div></p><p><b>Synonyms：</b><br>• optional（形容詞）<br>• unforced（形容詞）</p><div class="controls"><button class="unknown-btn" id="unknown-26" onclick="toggleUnknown(event,26)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,26,-1)">−</button><strong id="count-26">0</strong><button onclick="changeCount(event,26,1)">＋</button></div></div></div></details>
+<details class="card" data-id="27" data-key="suppress"><summary><span class="word">suppress</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-27"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>動詞</p><p><b>意味：</b>抑える、抑圧する、（感情などを）こらえる</p><p><b>例文：</b><br><i>Some people try to suppress their emotions instead of expressing them.</i><div class="example-jp">訳：感情を表現する代わりに、感情を抑えようとする人もいる。</div></p><p><b>Synonyms：</b><br>• restrain（動詞）<br>• stifle（動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-27" onclick="toggleUnknown(event,27)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,27,-1)">−</button><strong id="count-27">0</strong><button onclick="changeCount(event,27,1)">＋</button></div></div></div></details>
+<details class="card" data-id="28" data-key="turn to"><summary><span class="word">turn to</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-28"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>句動詞</p><p><b>意味：</b>〜に頼る、〜に相談する</p><p><b>例文：</b><br><i>Many people turn to the internet when they need reliable information.</i><div class="example-jp">訳：多くの人は信頼できる情報が必要なとき、インターネットに頼る。</div></p><p><b>Synonyms：</b><br>• rely on（句動詞）<br>• depend on（句動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-28" onclick="toggleUnknown(event,28)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,28,-1)">−</button><strong id="count-28">0</strong><button onclick="changeCount(event,28,1)">＋</button></div></div></div></details>
+<details class="card" data-id="29" data-key="involuntarily"><summary><span class="word">involuntarily</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-29"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>副詞</p><p><b>意味：</b>無意識に、意図せず</p><p><b>例文：</b><br><i>He involuntarily smiled when he heard the good news.</i><div class="example-jp">訳：良い知らせを聞いて、彼は思わず笑った。</div></p><p><b>Synonyms：</b><br>• unintentionally（副詞）<br>• accidentally（副詞）</p><div class="controls"><button class="unknown-btn" id="unknown-29" onclick="toggleUnknown(event,29)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,29,-1)">−</button><strong id="count-29">0</strong><button onclick="changeCount(event,29,1)">＋</button></div></div></div></details>
+<details class="card" data-id="30" data-key="expenses"><summary><span class="word">expenses</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-30"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞（複数形）</p><p><b>意味：</b>費用、経費、出費</p><p><b>例文：</b><br><i>The company covers all travel expenses for its employees.</i><div class="example-jp">訳：その会社は従業員の出張費をすべて負担する。</div></p><p><b>Synonyms：</b><br>• costs（名詞（複数形））<br>• expenditure（名詞（複数形））</p><div class="controls"><button class="unknown-btn" id="unknown-30" onclick="toggleUnknown(event,30)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,30,-1)">−</button><strong id="count-30">0</strong><button onclick="changeCount(event,30,1)">＋</button></div></div></div></details>
+<details class="card" data-id="31" data-key="travel expenses"><summary><span class="word">travel expenses</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-31"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞句</p><p><b>意味：</b>旅費、交通費、旅行にかかる費用</p><p><b>例文：</b><br><i>Employees can claim their travel expenses after the business trip.</i><div class="example-jp">訳：従業員は出張後に旅費を請求できる。</div></p><p><b>Synonyms：</b><br>• travel costs（名詞句）<br>• travel expenditure（名詞句）</p><div class="controls"><button class="unknown-btn" id="unknown-31" onclick="toggleUnknown(event,31)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,31,-1)">−</button><strong id="count-31">0</strong><button onclick="changeCount(event,31,1)">＋</button></div></div></div></details>
+<details class="card" data-id="32" data-key="as you may have guessed"><summary><span class="word">as you may have guessed</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-32"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>慣用表現</p><p><b>意味：</b>ご想像のとおり、もうお分かりかもしれませんが</p><p><b>例文：</b><br><i>As you may have guessed, the project was more expensive than expected.</i><div class="example-jp">訳：ご想像のとおり、そのプロジェクトは予想以上に費用がかかった。</div></p><p><b>Synonyms：</b><br>• as you might expect（慣用表現）<br>• as expected（慣用表現）</p><div class="controls"><button class="unknown-btn" id="unknown-32" onclick="toggleUnknown(event,32)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,32,-1)">−</button><strong id="count-32">0</strong><button onclick="changeCount(event,32,1)">＋</button></div></div></div></details>
+<details class="card" data-id="33" data-key="as you can imagine"><summary><span class="word">as you can imagine</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-33"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>慣用表現</p><p><b>意味：</b>ご想像のとおり、想像できると思いますが</p><p><b>例文：</b><br><i>As you can imagine, moving to another country was a major decision.</i><div class="example-jp">訳：ご想像のとおり、別の国へ移住することは大きな決断だった。</div></p><p><b>Synonyms：</b><br>• as you might imagine（慣用表現）<br>• as expected（慣用表現）</p><div class="controls"><button class="unknown-btn" id="unknown-33" onclick="toggleUnknown(event,33)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,33,-1)">−</button><strong id="count-33">0</strong><button onclick="changeCount(event,33,1)">＋</button></div></div></div></details>
+<details class="card" data-id="34" data-key="repentance"><summary><span class="word">repentance</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-34"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞</p><p><b>意味：</b>後悔、悔い改め</p><p><b>例文：</b><br><i>He expressed sincere repentance for his actions.</i><div class="example-jp">訳：彼は自分の行動を心から後悔した。</div></p><p><b>Synonyms：</b><br>• remorse（名詞）<br>• regret（名詞）</p><div class="controls"><button class="unknown-btn" id="unknown-34" onclick="toggleUnknown(event,34)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,34,-1)">−</button><strong id="count-34">0</strong><button onclick="changeCount(event,34,1)">＋</button></div></div></div></details>
+<details class="card" data-id="35" data-key="repent"><summary><span class="word">repent</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-35"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>動詞</p><p><b>意味：</b>後悔する、悔い改める</p><p><b>例文：</b><br><i>He repented of his past mistakes and tried to make amends.</i><div class="example-jp">訳：彼は過去の過ちを悔い、償おうとした。</div></p><p><b>Synonyms：</b><br>• regret（動詞）<br>• be sorry for（動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-35" onclick="toggleUnknown(event,35)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,35,-1)">−</button><strong id="count-35">0</strong><button onclick="changeCount(event,35,1)">＋</button></div></div></div></details>
+<details class="card" data-id="36" data-key="repentant"><summary><span class="word">repentant</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-36"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞</p><p><b>意味：</b>後悔している、悔い改めた</p><p><b>例文：</b><br><i>The repentant student apologized for his behavior.</i><div class="example-jp">訳：その後悔している生徒は自分の行動を謝罪した。</div></p><p><b>Synonyms：</b><br>• remorseful（形容詞）<br>• sorry（形容詞）</p><div class="controls"><button class="unknown-btn" id="unknown-36" onclick="toggleUnknown(event,36)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,36,-1)">−</button><strong id="count-36">0</strong><button onclick="changeCount(event,36,1)">＋</button></div></div></div></details>
+<details class="card" data-id="37" data-key="to one’s delight"><summary><span class="word">to one’s delight</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-37"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>慣用表現</p><p><b>意味：</b>〜が喜んだことに、うれしいことに</p><p><b>例文：</b><br><i>To my delight, I passed the IELTS test on my first attempt.</i><div class="example-jp">訳：うれしいことに、私はIELTSに初回で合格した。</div></p><p><b>Synonyms：</b><br>• to one’s joy（慣用表現）<br>• to one’s happiness（慣用表現）</p><div class="controls"><button class="unknown-btn" id="unknown-37" onclick="toggleUnknown(event,37)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,37,-1)">−</button><strong id="count-37">0</strong><button onclick="changeCount(event,37,1)">＋</button></div></div></div></details>
+<details class="card" data-id="38" data-key="beg pardon"><summary><span class="word">beg pardon</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-38"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>慣用表現</p><p><b>意味：</b>もう一度言ってください、すみません（聞き返し）</p><p><b>例文：</b><br><i>I beg your pardon, but could you say that again?</i><div class="example-jp">訳：すみませんが、もう一度言っていただけますか。</div></p><p><b>Synonyms：</b><br>• excuse me（慣用表現）<br>• pardon me（慣用表現）</p><div class="controls"><button class="unknown-btn" id="unknown-38" onclick="toggleUnknown(event,38)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,38,-1)">−</button><strong id="count-38">0</strong><button onclick="changeCount(event,38,1)">＋</button></div></div></div></details>
+<details class="card" data-id="39" data-key="perception"><summary><span class="word">perception</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-39"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞</p><p><b>意味：</b>認識、知覚、見方、印象</p><p><b>例文：</b><br><i>Public perception of social media has changed significantly in recent years.</i><div class="example-jp">訳：近年、ソーシャルメディアに対する一般の認識は大きく変化した。</div></p><p><b>Synonyms：</b><br>• view（名詞）<br>• attitude（名詞）</p><div class="controls"><button class="unknown-btn" id="unknown-39" onclick="toggleUnknown(event,39)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,39,-1)">−</button><strong id="count-39">0</strong><button onclick="changeCount(event,39,1)">＋</button></div></div></div></details>
+<details class="card" data-id="40" data-key="beg"><summary><span class="word">beg</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-40"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>動詞</p><p><b>意味：</b>懇願する、頼む、乞う</p><p><b>例文：</b><br><i>The child begged his parents to let him go to the concert.</i><div class="example-jp">訳：その子どもはコンサートに行かせてほしいと両親に懇願した。</div></p><p><b>Synonyms：</b><br>• plead（動詞）<br>• implore（動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-40" onclick="toggleUnknown(event,40)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,40,-1)">−</button><strong id="count-40">0</strong><button onclick="changeCount(event,40,1)">＋</button></div></div></div></details>
+<details class="card" data-id="41" data-key="cognizant"><summary><span class="word">cognizant</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-41"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞</p><p><b>意味：</b>認識している、気づいている</p><p><b>例文：</b><br><i>People should be cognizant of the risks associated with excessive screen time.</i><div class="example-jp">訳：人々は画面を見すぎることに伴うリスクを認識すべきだ。</div></p><p><b>Synonyms：</b><br>• aware（形容詞）<br>• conscious（形容詞）</p><div class="controls"><button class="unknown-btn" id="unknown-41" onclick="toggleUnknown(event,41)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,41,-1)">−</button><strong id="count-41">0</strong><button onclick="changeCount(event,41,1)">＋</button></div></div></div></details>
+<details class="card" data-id="42" data-key="be cognizant of"><summary><span class="word">be cognizant of</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-42"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞句</p><p><b>意味：</b>〜を認識している、〜に気づいている</p><p><b>例文：</b><br><i>Companies must be cognizant of their environmental impact.</i><div class="example-jp">訳：企業は自社が環境に与える影響を認識しなければならない。</div></p><p><b>Synonyms：</b><br>• be aware of（形容詞句）<br>• recognize（形容詞句）</p><div class="controls"><button class="unknown-btn" id="unknown-42" onclick="toggleUnknown(event,42)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,42,-1)">−</button><strong id="count-42">0</strong><button onclick="changeCount(event,42,1)">＋</button></div></div></div></details>
+<details class="card" data-id="43" data-key="be aware of"><summary><span class="word">be aware of</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-43"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞句</p><p><b>意味：</b>〜を知っている、〜を認識している</p><p><b>例文：</b><br><i>Students should be aware of the importance of time management.</i><div class="example-jp">訳：学生は時間管理の重要性を認識すべきだ。</div></p><p><b>Synonyms：</b><br>• be conscious of（形容詞句）<br>• recognize（形容詞句）</p><div class="controls"><button class="unknown-btn" id="unknown-43" onclick="toggleUnknown(event,43)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,43,-1)">−</button><strong id="count-43">0</strong><button onclick="changeCount(event,43,1)">＋</button></div></div></div></details>
+<details class="card" data-id="44" data-key="be mindful of"><summary><span class="word">be mindful of</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-44"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>形容詞句</p><p><b>意味：</b>〜に注意する、〜を意識する</p><p><b>例文：</b><br><i>We should be mindful of how our choices affect the environment.</i><div class="example-jp">訳：私たちは自分たちの選択が環境に与える影響を意識すべきだ。</div></p><p><b>Synonyms：</b><br>• be conscious of（形容詞句）<br>• be attentive to（形容詞句）</p><div class="controls"><button class="unknown-btn" id="unknown-44" onclick="toggleUnknown(event,44)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,44,-1)">−</button><strong id="count-44">0</strong><button onclick="changeCount(event,44,1)">＋</button></div></div></div></details>
+<details class="card" data-id="45" data-key="turn out to be"><summary><span class="word">turn out to be</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-45"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>慣用表現</p><p><b>意味：</b>結果的に〜だと分かる</p><p><b>例文：</b><br><i>The job turned out to be more challenging than I expected.</i><div class="example-jp">訳：その仕事は結果的に私が思っていたより難しいものだと分かった。</div></p><p><b>Synonyms：</b><br>• prove to be（慣用表現）<br>• end up being（慣用表現）</p><div class="controls"><button class="unknown-btn" id="unknown-45" onclick="toggleUnknown(event,45)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,45,-1)">−</button><strong id="count-45">0</strong><button onclick="changeCount(event,45,1)">＋</button></div></div></div></details>
+<details class="card" data-id="46" data-key="cannot help + -ing"><summary><span class="word">cannot help + -ing</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-46"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>構文</p><p><b>意味：</b>〜せずにはいられない</p><p><b>例文：</b><br><i>I cannot help worrying about the future when I see the current situation.</i><div class="example-jp">訳：現在の状況を見ると、将来を心配せずにはいられない。</div></p><p><b>Synonyms：</b><br>• cannot resist + -ing（構文）<br>• cannot avoid + -ing（構文）</p><div class="controls"><button class="unknown-btn" id="unknown-46" onclick="toggleUnknown(event,46)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,46,-1)">−</button><strong id="count-46">0</strong><button onclick="changeCount(event,46,1)">＋</button></div></div></div></details>
+<details class="card" data-id="47" data-key="make merriment"><summary><span class="word">make merriment</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-47"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>動詞句</p><p><b>意味：</b>楽しむ、陽気に騒ぐ（やや古風）</p><p><b>例文：</b><br><i>The guests made merriment together after the ceremony.</i><div class="example-jp">訳：式の後、招待客たちは一緒に楽しく過ごした。</div></p><p><b>Synonyms：</b><br>• have fun（動詞句）<br>• enjoy oneself（動詞句）</p><div class="controls"><button class="unknown-btn" id="unknown-47" onclick="toggleUnknown(event,47)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,47,-1)">−</button><strong id="count-47">0</strong><button onclick="changeCount(event,47,1)">＋</button></div></div></div></details>
+<details class="card" data-id="48" data-key="hereafter"><summary><span class="word">hereafter</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-48"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>副詞</p><p><b>意味：</b>今後は、これ以降</p><p><b>例文：</b><br><i>Hereafter, all applications must be submitted online.</i><div class="example-jp">訳：今後、すべての申請はオンラインで提出しなければならない。</div></p><p><b>Synonyms：</b><br>• henceforth（副詞）<br>• from now on（副詞）</p><div class="controls"><button class="unknown-btn" id="unknown-48" onclick="toggleUnknown(event,48)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,48,-1)">−</button><strong id="count-48">0</strong><button onclick="changeCount(event,48,1)">＋</button></div></div></div></details>
+<details class="card" data-id="49" data-key="inspire"><summary><span class="word">inspire</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-49"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>動詞</p><p><b>意味：</b>刺激する、やる気を起こさせる</p><p><b>例文：</b><br><i>Her story inspired many young people to pursue their dreams.</i><div class="example-jp">訳：彼女の物語は多くの若者に夢を追うよう刺激を与えた。</div></p><p><b>Synonyms：</b><br>• motivate（動詞）<br>• encourage（動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-49" onclick="toggleUnknown(event,49)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,49,-1)">−</button><strong id="count-49">0</strong><button onclick="changeCount(event,49,1)">＋</button></div></div></div></details>
+<details class="card" data-id="50" data-key="shipment"><summary><span class="word">shipment</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-50"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>名詞</p><p><b>意味：</b>発送品、出荷、配送品</p><p><b>例文：</b><br><i>The shipment arrived two days later than expected.</i><div class="example-jp">訳：その配送品は予定より2日遅れて到着した。</div></p><p><b>Synonyms：</b><br>• delivery（名詞）<br>• consignment（名詞）</p><div class="controls"><button class="unknown-btn" id="unknown-50" onclick="toggleUnknown(event,50)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,50,-1)">−</button><strong id="count-50">0</strong><button onclick="changeCount(event,50,1)">＋</button></div></div></div></details>
+<details class="card" data-id="51" data-key="take away"><summary><span class="word">take away</span><button class="speak-btn" type="button" onclick="speakWord(event, this.closest('details').querySelector('.word').textContent)" aria-label="発音">🔊</button><span class="status" id="status-51"></span><span class="chevron">＋</span></summary><div class="answer"><p><b>品詞：</b>句動詞</p><p><b>意味：</b>取り去る、奪う、持ち帰る</p><p><b>例文：</b><br><i>The experience took away some of my fear of speaking English.</i><div class="example-jp">訳：その経験によって、英語を話すことへの恐怖が少し和らいだ。</div></p><p><b>Synonyms：</b><br>• remove（句動詞）<br>• take off（句動詞）</p><div class="controls"><button class="unknown-btn" id="unknown-51" onclick="toggleUnknown(event,51)">□ わからなかった</button><div class="mistakes"><span>間違えた回数</span><button onclick="changeCount(event,51,-1)">−</button><strong id="count-51">0</strong><button onclick="changeCount(event,51,1)">＋</button></div></div></div></details>
+</div>
+
+<script>
+const KEY = "english_vocab_progress_v1";
+let data = JSON.parse(localStorage.getItem(KEY) || "{}");
+
+// Migrate the old numeric-ID records to stable word-based records.
+// This prevents learning history from being lost when new words are inserted.
+const OLD_WORDS = ['delight', 'disgraceful', 'reputable', 'diminish', 'henceforth', 'transpire', 'depict', 'indispensable', 'crucial', 'contribute', 'attribute', 'utilize', 'entrepreneur', 'correlate', 'mimic', 'voluntarily', 'adolescent', 'substance', 'capable', 'dependence', 'consumption', 'exacerbate', 'engage', 'highlight'];
+const hasNumeric = Object.keys(data).some(k => /^\d+$/.test(k));
+if (hasNumeric) {
+  const migrated = {};
+  OLD_WORDS.forEach((word, i) => {
+    if (data[i] !== undefined) migrated[word] = data[i];
+  });
+  Object.keys(data).forEach(k => { if (!/^\d+$/.test(k)) migrated[k] = data[k]; });
+  data = migrated;
+  localStorage.setItem(KEY, JSON.stringify(data));
+}
+
+function keyFor(card) { return card.dataset.key; }
+function get(card) {
+  const key = keyFor(card);
+  if (!data[key]) data[key] = {unknown:false, count:0};
+  return data[key];
+}
+function save() { localStorage.setItem(KEY, JSON.stringify(data)); render(); }
+function toggleUnknown(e, id) {
+  e.preventDefault(); e.stopPropagation();
+  const card = document.querySelector('.card[data-id="'+id+'"]');
+  const x = get(card); x.unknown = !x.unknown; save();
+}
+function changeCount(e, id, delta) {
+  e.preventDefault(); e.stopPropagation();
+  const card = document.querySelector('.card[data-id="'+id+'"]');
+  const x = get(card); x.count = Math.max(0, (x.count || 0) + delta);
+  if (x.count > 0) x.unknown = true; save();
+}
+function speakWord(e, word) {
+  e.preventDefault(); e.stopPropagation();
+  if (!('speechSynthesis' in window)) { alert('このブラウザでは音声機能が利用できません。'); return; }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-US'; u.rate = 0.9;
+  window.speechSynthesis.speak(u);
+}
+function render() {
+  let unknownTotal=0, mistakesTotal=0;
+  document.querySelectorAll('.card').forEach(card => {
+    const id=card.dataset.id, x=get(card);
+    document.getElementById('count-'+id).textContent=x.count||0;
+    const btn=document.getElementById('unknown-'+id);
+    btn.classList.toggle('active',!!x.unknown);
+    btn.textContent=x.unknown?'☑ わからなかった':'□ わからなかった';
+    const status=document.getElementById('status-'+id);
+    status.innerHTML=x.unknown?'❗':'';
+    if(x.unknown) unknownTotal++;
+    mistakesTotal+=x.count||0;
+  });
+  document.getElementById('summary').innerHTML=`チェック中 <span class="badge">${unknownTotal}</span> 語　・　累計ミス <span class="badge">${mistakesTotal}</span> 回`;
+}
+function showAll(){document.querySelectorAll('.card').forEach(c=>c.style.display='');}
+function showUnknown(){document.querySelectorAll('.card').forEach(c=>c.style.display=get(c).unknown?'':'none');}
+render();
+</script>
+</body>
+</html>
